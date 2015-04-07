@@ -1,0 +1,1 @@
+msbuild WcfService1.csproj /p:Configuration=Dev;DeployOnBuild=false;outputpath="target";UseWPP_CopyWebApplication=true;PipelineDependsOnbuild=false /t:Clean;Build /l:FileLogger,Microsoft.Build.Engine;logfile=msbuild.log;append=false;verbosity=normal;encoding=utf-8
