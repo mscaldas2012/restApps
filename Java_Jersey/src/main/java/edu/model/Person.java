@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
- * Created by MCQ1 on 4/3/2015.
+ * Created by Marcelo Caldas on 4/3/2015.
  */
 @XmlRootElement
 public class Person {
