@@ -10,17 +10,17 @@ namespace TestAPIns
     public class Bookmark
     {
         
-        public Person owner;
-        [DataMember]
-        public long id;
-        [DataMember]
-        public string url;
-        [DataMember]
-        public string description;
+        public Person Owner;
+        [DataMember(Name="id")]
+        public long ID;
+        [DataMember(Name = "url")]
+        public string Url;
+        [DataMember(Name = "description")]
+        public string Description;
 
         Bookmark()
         {
-            id = (DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond);
+            ID = (DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond);
         }
     }
 }

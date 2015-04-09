@@ -62,7 +62,7 @@ namespace TestAPIns
             Person p = GetAPerson(userId);
             if (p != null)
             {
-                return p.bookmarks;
+                return p.Bookmarks;
             }
             else
             {
@@ -74,7 +74,7 @@ namespace TestAPIns
             Person p = GetAPerson(userId);
             if (p!= null) 
             {
-                return p.bookmarks.FirstOrDefault(e => e.id == Convert.ToInt64(bmId));
+                return p.Bookmarks.FirstOrDefault(e => e.ID == Convert.ToInt64(bmId));
             }
             return null;
         }
@@ -82,14 +82,14 @@ namespace TestAPIns
         public Bookmark addBookmark(string userId, Bookmark bookmark)
         {
             Person p = GetAPerson(userId);
-            List<Bookmark> b = p.bookmarks;
+            List<Bookmark> b = p.Bookmarks;
             if (b == null) {
                 b = new List<Bookmark>();
             }
              b.Add(bookmark);
-             p.bookmarks = b;
-             bookmark.owner = p;
-             bookmark.id =(DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond);
+             p.Bookmarks = b;
+             bookmark.Owner = p;
+             bookmark.ID =(DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond);
             return bookmark;
         }
 
@@ -97,16 +97,16 @@ namespace TestAPIns
         {
             Person p = GetAPerson(userId);
             //List<Bookmark> b = p.bookmarks;
-            Bookmark b = p.bookmarks.FirstOrDefault(e => e.id == Convert.ToInt64(bmId));
-            b.url = updateBookmark.url;
-            b.description = updateBookmark.description;
+            Bookmark b = p.Bookmarks.FirstOrDefault(e => e.ID == Convert.ToInt64(bmId));
+            b.Url = updateBookmark.Url;
+            b.Description = updateBookmark.Description;
 
             return b;
         }
         public void deleteBookmark(string userId, string bmId)
         {
             Person p = GetAPerson(userId);
-            p.bookmarks.RemoveAll(e => e.id == Convert.ToInt64(bmId));
+            p.Bookmarks.RemoveAll(e => e.ID == Convert.ToInt64(bmId));
         }
 
         #endregion 
