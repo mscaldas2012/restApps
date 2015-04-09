@@ -8,9 +8,10 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * Created by MCQ1 on 4/3/2015.
+ * Created by Marcelo Caldas on 4/3/2015.
  */
 @Path("/account")
 @Singleton
@@ -24,8 +25,15 @@ public class PersonService {
 
     @GET
     @Produces({ MediaType.APPLICATION_JSON })
+    //Use this for mandatory query parameters: @QueryParam("name")String name  //set as method parameter.
     public List<Person> getAllPeople() {
-        return  allPeople;
+        //Use this for optional parameters:
+        String name = uriInfo.getQueryParameters().getFirst("name");
+        if (allPeople != null && name != null && name.trim().length() > 0) {
+            return allPeople.stream().filter(p -> p.getName().contains(name)).collect(Collectors.toList());
+        } else {
+            return allPeople;
+        }
     }
 
     @GET
@@ -76,7 +84,7 @@ public class PersonService {
 
     //bookmarks management:
     @GET
-    @Path("{id}/bookmarks")
+    @Path("{id}/bookmark")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Bookmark> getBookmarksForUser(@PathParam("id")int userId) {
         Person p = getAPerson(userId);
@@ -84,7 +92,7 @@ public class PersonService {
     }
 
     @POST
-    @Path("{id}/bookmarks")
+    @Path("{id}/bookmark")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Bookmark addBookmark(@PathParam("id")int userId, Bookmark newBookmark) {

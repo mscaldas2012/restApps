@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Created by MCQ1 on 4/6/2015.
+ * Created by Marcel Caldas on 4/6/2015.
  */
 @XmlRootElement
 public class Bookmark {
