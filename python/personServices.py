@@ -56,7 +56,7 @@ class AccountListAPI(Resource):
             'age': args['age']
         }
         accounts.append(acct)
-        return {'account': marshal(acct, person_fields)}, 201
+        return {'account': marshal(acct, person_fields)}, 200
 
 
 class AccountAPI(Resource):
@@ -112,7 +112,7 @@ class BookmarkPI(Resource):
         else:
             acct['bookmarks'] = [bm]
 
-        return {'bookmark': marshal(acct, person_fields)}, 201
+        return {'bookmark': marshal(acct, person_fields)}, 200
 
     def put(self, id):
         acct = getAccount(id)
