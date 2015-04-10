@@ -60,7 +60,8 @@ mapping objects to databases, but this is not the scope for this project.
 
 The summary of the services are as follow:
 <ul>
-<LI><B>GET  /account - </b>retrieves all accounts available (remember, at each startup, there will be no accounts)</li>
+<LI><B>GET  /account - </b>retrieves all accounts available (remember, at each startup, there will be no accounts)<BR>
+it accepts one query parameter: name, to filter list with names that contain a specified value.</li>
 <LI><B>POST /account -</b> creates a new account.</li>
 <LI><B>GET  /account/{id} -</b> retrieves a specific account or 404 if the account id is invalid.</li>
 <LI><B>PUT  /account/{id} -</b> updates the specific account provided by id.</li>

@@ -9,14 +9,14 @@ namespace TestAPIns
     [DataContract]
     public class Person
     {
-        [DataMember]
+        [DataMember(Name="id")]
         public int ID;
-        [DataMember]
+        [DataMember(Name="name")]
         public string Name;
-        [DataMember]
+        [DataMember(Name="age")]
         public string Age;
-        [DataMember]
-        public List<Bookmark> bookmarks;
+        [DataMember(Name="bookmarks")]
+        public List<Bookmark> Bookmarks;
 
     } 
 }
