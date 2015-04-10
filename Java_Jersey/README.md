@@ -1,11 +1,12 @@
 <h2>Configuration</h2>
 <ul>
+<li>Mac OS X (10.10.2)</li>
 <li>Java 1.8 -- Using lambda expressions for filtering accounts list (other than that, could've been 1.7 or lower)</li>
 <li>Maven 3.0</li>
 <li>Jersey</li>
 <li>tomcat 7.0</li>
 <li>IntelliJ IDEA 14</li>
-
+</ul>
 
 <h2>Implementation</h2>
 This is a Java implementation of the RESTFul services.
