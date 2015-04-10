@@ -1,8 +1,16 @@
-<h2>Creating the Services</h2>
+
+<h2>Configuration</h2>
+<ul>
+<li>visual Studio 12</li>
+<li>Windows 7</li>
+
+</ul>
+<h2>Implementation</h2>
+<h3>Creating the Services</h3>
 Creating restful web services in C# is very simple. You can use WCF as template (under File -> New (Project) --> WCF Service Application). With some brief configuration on Web.Config, I was able to default everything to JSON, which is one of the requirements I have for the projects.
 
 
-<h2>Differences and Challenges</h2>
+<h3>Differences and Challenges</h3>
 I tried creating my Person object with an integer for ID, and integer for the url templates (account/{id}), but it seems is required to have strings for those url templates:
 
 <code>
