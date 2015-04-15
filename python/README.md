@@ -1,10 +1,12 @@
 <h2>Python implementation.</h2>
 
 <h2>Configuration</h2>
-Python 2.7
-Mac OS X (10.10.2)
-IntelliJ IDEA 14
-Flask (with rest extension)
+<ul>
+<li>Python 2.7</li>
+<li>Mac OS X (10.10.2)</li>
+<li>IntelliJ IDEA 14</li>
+<li>Flask (with rest extension)</li>
+</ul>
 
 <h2>Setup</h2>
 I'm using Flask (http://flask.pocoo.org) with the rest extension.

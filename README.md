@@ -1,11 +1,11 @@
 # restApps
 
-<h2>Status: (last updated 4/6/2015)</h2>
+<h2>Status: (last updated 4/10/2015)</h2>
 <ul>
 <li><B>Java:</B>Phase 1 complete</li>
-<li><B>C#:</B> Phase 1 - under development</li>
-<li><B>Python:</B> Phase 2 - under development</li>
-<li><B>Ruby:</B> Not started</li>
+<li><B>C#:</B> Phase 1 - complete</li>
+<li><B>Python:</B> Phase 1 - complete</li>
+<li><B>Ruby:</B> Phase 1 - under development</li>
 <li><B>Node JS:</B> Not started</li>
 </ul>
 
@@ -101,9 +101,11 @@ through all phases.
 
 here's a definition of some phases I'm planning on creating. (and making each phase available for checkout, so that if
 you're not interested in certain features, you can always get the previous phase)
-<ol>
+<ul>
 <li>Phase 1: Basic implementation of RESTful services</li>
-<li>Phase 2: Use authentication (basic, oauth, ? don't know</li>
-<li>
+<li>Phase n: Add sorting and pagination and metadata to results</li>
+<li>Phase n: Add versioning to API</li>
+<li>Phase n: Use authentication (basic, oauth, ? don't know</li>
+</ul>
 
 
