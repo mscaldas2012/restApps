@@ -2,10 +2,10 @@
 
 <h2>Status: (last updated 4/10/2015)</h2>
 <ul>
-<li><B>Java:</B>Phase 1 complete</li>
-<li><B>C#:</B> Phase 1 - complete</li>
-<li><B>Python:</B> Phase 1 - complete</li>
-<li><B>Ruby:</B> Phase 1 - under development</li>
+<li><B>Java:</B>Phase 1 - Need to validate 404s</li>
+<li><B>C#:</B> Phase 1 - Need to validate 404s</li>
+<li><B>Python:</B> Phase 1 - Need to validate 404s</li>
+<li><B>Ruby:</B> Phase 1 - Complete</li>
 <li><B>Node JS:</B> Not started</li>
 </ul>
 
