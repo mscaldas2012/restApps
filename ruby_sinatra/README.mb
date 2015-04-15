@@ -1,0 +1,20 @@
+<h2>Setup</h2>
+<ul>
+<li>ruby 2.0.0p481</li>
+<li>Sinatra</li>
+<ul>
+
+<h2>Implementation</h2>
+I must say right out of the bat: If I used DataMapper, it seemed this whole programming would have been much easier.
+But it wouldn't be apples to apples comparisson any more.
+
+I found great examples of Ruby/Sinatra/DataMapper out there on the web for implementing restful services and from a "production" grade point of view, it makes a lot of sense to use a real persistence storage. But, since I started on this path by eliminating any persistence storage for each implementation, I would like to do the same here and keep my objects in memory.
+
+But by removing DataMapper from those projects, it led me to have to manipulate the json at a much closer level that seems to be better
+encapsulated on DataMapper.
+
+Also, i'm very new to ruby and not very familiar with its syntax. I had issues converting Symbols (my query parameters) into integers for comparisson and manipulating my arrays - accounts and bookmarks. But once I got more familiar with that,  the restul layer per say seems a lot lik eany other platform I've implemented so far.
+
+My HTTP verb and url path is mapped to a method. On that method I can parse the JSON sent on the reqeust and manipulate it.
+Unfortunately, maybe because of lack of knowledge on ruby/rails, but I had to create the objects myself and populate them with the JSON sent, while on other platforms - and even when using DataMapper, I get the object directly. From my google search, I found a similar solution that implemented on models/MyJson.rb, but that implementation (gem jsonify, i believe it was), gave me a convoluted JSON representation with class names and @ signs for each property. So I just copied the source code and modified it a little to clean the final JSON being generated.
+

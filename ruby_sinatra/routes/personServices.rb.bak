@@ -1,0 +1,45 @@
+set :port, 8080
+
+get '/testAPI/account' do
+  Person.all.to_json
+end
+
+get '/testAPI/account/:id' do
+  t = Person.get(params[:id])
+  if t.nil?
+    halt 404
+  end
+  t.to_json
+end
+
+post '/testAPI/account' do
+  body = JSON.parse request.body.read
+  t = Person.create(
+    name:    body['name'],
+    age: body['age'],
+    #id = Person.size
+  )
+  status 200
+  t.to_json 
+end
+
+put '/testAP/account/:id' do
+  body = JSON.parse request.body.read
+  t = Person.get(params[:id])
+  if t.nil?
+    halt 404
+  end
+  halt 500 unless Person.update(
+    name:  body['name'],
+    age:   body['age'],
+  )
+  t.to_json
+end
+
+delete '/testAPI/account/:id' do
+  t = Person.get(params[:id])
+  if t.nil?
+    halt 404
+  end
+  halt 500 unless t.destroy
+end
