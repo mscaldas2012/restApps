@@ -56,7 +56,7 @@ class AccountListAPI(Resource):
             'age': args['age']
         }
         accounts.append(acct)
-        return {'account': marshal(acct, person_fields)}, 200
+        return {'account': marshal(acct, person_fields)}, 201
 
 
 class AccountAPI(Resource):
@@ -64,7 +64,7 @@ class AccountAPI(Resource):
         self.reqparse = reqparse.RequestParser()
         self.reqparse.add_argument('name', type=str, location='json')
         self.reqparse.add_argument('age', type=int, location='json')
-        self.reqparse.add_argument('bookmarks', type=bookmark_fields, location='json')
+        self.reqparse.add_argument('bookmarks', type=list, location='json')
         super(AccountAPI, self).__init__()
 
     def get(self, id):

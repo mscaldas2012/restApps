@@ -4,6 +4,7 @@ import edu.model.Bookmark;
 import edu.model.Person;
 
 import javax.inject.Singleton;
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.util.ArrayList;
@@ -20,6 +21,8 @@ public class PersonService {
     UriInfo uriInfo;
     @Context
     Request request;
+    @Context  //injected response proxy supporting multiple threads
+    private HttpServletResponse response;
 
     List<Person> allPeople = new ArrayList<Person>();
 
@@ -53,6 +56,7 @@ public class PersonService {
     public Person createPerson(Person newPerson) {
         newPerson.setId(allPeople.size());
         allPeople.add(newPerson);
+        response.setStatus(Response.Status.CREATED.getStatusCode());
         return newPerson;
     }
 
@@ -101,6 +105,7 @@ public class PersonService {
             p.setBookmarks(new ArrayList<Bookmark>());
         }
         p.getBookmarks().add(newBookmark);
+        response.setStatus(Response.Status.CREATED.getStatusCode());
         return newBookmark;
     }
 
