@@ -145,7 +145,6 @@ function findBookmark(userId, bId) {
         })
         return bookmark[0];
     }
-
 }
 
 function findAccount(id) {
