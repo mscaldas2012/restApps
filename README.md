@@ -1,12 +1,12 @@
 # restApps
 
-<h2>Status: (last updated 4/10/2015)</h2>
+<h2>Status: (last updated 5/14/2015)</h2>
 <ul>
 <li><B>Java:</B>Phase 1 - Need to validate 404s</li>
 <li><B>C#:</B> Phase 1 - Need to validate 404s</li>
 <li><B>Python:</B> Phase 1 - Need to validate 404s</li>
 <li><B>Ruby:</B> Phase 1 - Complete</li>
-<li><B>Node JS:</B> Not started</li>
+<li><B>Node JS:</B> Phase 1 - Complete</li>
 </ul>
 
 
