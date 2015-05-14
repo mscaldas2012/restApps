@@ -82,8 +82,13 @@ exports.findAllBookmarks = function (req, res, next) {
 }
 
 exports.findABookmark = function (req, res, next) {
-    var acct= findAccount(req.params.userId);
+    var bm= findBookmark(req.params.userId, req.params.bookmarkId);
     res.setHeader('Access-Control-Allow-Origin', '*');
+    if (bm) {
+        res.send(200, bm);
+    } else {
+        res.send(404);
+    }
 
 }
 
@@ -134,10 +139,13 @@ exports.deleteBookmark = function(req, res, next) {
 
 function findBookmark(userId, bId) {
     var acct= findAccount(userId);
-    var bookmark = acct.bookmarks.filter(function(item) {
-        return (item.id == bId);
-    })
-    return bookmark[0];
+    if (acct && acct.bookmarks) {
+        var bookmark = acct.bookmarks.filter(function(item) {
+            return (item.id == bId);
+        })
+        return bookmark[0];
+    }
+
 }
 
 function findAccount(id) {
