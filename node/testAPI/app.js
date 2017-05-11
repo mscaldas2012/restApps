@@ -30,7 +30,7 @@ server.post( {path: ROOT + '/account/:userId/bookmark',             version: VER
 server.put(  {path: ROOT + '/account/:userId/bookmark/:bookmarkId', version: VERSION}, accounts.updateBookmark);
 server.del(  {path: ROOT + '/account/:userId/bookmark/:bookmarkId', version: VERSION}, accounts.deleteBookmark);
 
-server.listen(port, ip_addr, function() {
+server.listen(port, function() {
 	console.log('%s listening at %s', server.name, server.url);
 });
 
