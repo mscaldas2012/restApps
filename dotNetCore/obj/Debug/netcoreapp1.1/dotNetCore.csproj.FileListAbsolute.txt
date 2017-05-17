@@ -1,0 +1,8 @@
+/Users/caldama/projects/restApps/dotNetCore/bin/Debug/netcoreapp1.1/dotNetCore.deps.json
+/Users/caldama/projects/restApps/dotNetCore/bin/Debug/netcoreapp1.1/dotNetCore.runtimeconfig.json
+/Users/caldama/projects/restApps/dotNetCore/bin/Debug/netcoreapp1.1/dotNetCore.runtimeconfig.dev.json
+/Users/caldama/projects/restApps/dotNetCore/bin/Debug/netcoreapp1.1/dotNetCore.dll
+/Users/caldama/projects/restApps/dotNetCore/bin/Debug/netcoreapp1.1/dotNetCore.pdb
+/Users/caldama/projects/restApps/dotNetCore/obj/Debug/netcoreapp1.1/dotNetCore.AssemblyInfo.cs
+/Users/caldama/projects/restApps/dotNetCore/obj/Debug/netcoreapp1.1/dotNetCore.dll
+/Users/caldama/projects/restApps/dotNetCore/obj/Debug/netcoreapp1.1/dotNetCore.pdb
